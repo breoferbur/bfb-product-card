@@ -14,7 +14,6 @@ export const useProduct = ({ product, value = 0, initialValues, onChange }: useP
     const [counter, setCounter] = useState<number>(initialValues?.count || value);
     const isMounted = useRef(false);
 
-    // Sincroniza el valor del contador de producto -> carrito
     useEffect(() => {
         if (!isMounted.current) return;
         setCounter(value);
